@@ -188,7 +188,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(54, 454);
+            this.btnSave.Location = new System.Drawing.Point(23, 454);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 50);
             this.btnSave.TabIndex = 15;
@@ -197,12 +197,14 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(407, 454);
+            this.btnBack.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(402, 454);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(100, 50);
             this.btnBack.TabIndex = 16;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             // 
             // ApplicantProfileForm
             // 
@@ -229,9 +231,11 @@
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ApplicantProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Profile";
+            this.Load += new System.EventHandler(this.ApplicantProfileForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

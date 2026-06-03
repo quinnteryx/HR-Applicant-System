@@ -26,5 +26,10 @@ namespace FINAL_PROJECT.Forms
         {
 
         }
+
+        private void ApplicantProfileForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
