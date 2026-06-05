@@ -70,12 +70,6 @@
   <ItemGroup>
     <Compile Include="Database\DatabaseHelper.cs" />
     <Compile Include="Database\DBConnection.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ApplicantProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +82,12 @@
     <Compile Include="Forms\ApplicantDocumentsForm.Designer.cs">
       <DependentUpon>ApplicantDocumentsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ApplicantDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ApplicantDashboardForm.Designer.cs">
+      <DependentUpon>ApplicantDashboardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\UserSession.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ApplicantProfileForm.resx">
       <DependentUpon>ApplicantProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ApplicantDashboardForm.resx">
+      <DependentUpon>ApplicantDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
