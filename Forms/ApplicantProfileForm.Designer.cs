@@ -37,7 +37,6 @@
             this.txtMiddleName = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.lblAddress = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblDOB = new System.Windows.Forms.Label();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
@@ -45,8 +44,9 @@
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnupdate = new System.Windows.Forms.Button();
-            this.btnclear = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -69,7 +69,6 @@
             this.lblFirstName.Size = new System.Drawing.Size(92, 20);
             this.lblFirstName.TabIndex = 1;
             this.lblFirstName.Text = "First Name";
-            this.lblFirstName.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtFirstName
             // 
@@ -116,12 +115,11 @@
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(19, 172);
+            this.lblPhone.Location = new System.Drawing.Point(12, 172);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(120, 20);
             this.lblPhone.TabIndex = 7;
             this.lblPhone.Text = "Phone Number";
-            this.lblPhone.Click += new System.EventHandler(this.lblPhone_Click);
             // 
             // txtPhone
             // 
@@ -129,16 +127,6 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(220, 22);
             this.txtPhone.TabIndex = 8;
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(20, 211);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(71, 20);
-            this.lblAddress.TabIndex = 9;
-            this.lblAddress.Text = "Address";
             // 
             // txtAddress
             // 
@@ -161,7 +149,7 @@
             // 
             this.dtpDOB.Location = new System.Drawing.Point(146, 253);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(220, 22);
+            this.dtpDOB.Size = new System.Drawing.Size(242, 22);
             this.dtpDOB.TabIndex = 12;
             // 
             // lblGender
@@ -196,6 +184,7 @@
             this.btnSave.TabIndex = 15;
             this.btnSave.Text = "Save Profile";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnBack
             // 
@@ -207,26 +196,39 @@
             this.btnBack.TabIndex = 16;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnupdate
+            // btnUpdate
             // 
-            this.btnupdate.BackColor = System.Drawing.Color.Green;
-            this.btnupdate.Location = new System.Drawing.Point(146, 454);
-            this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(100, 50);
-            this.btnupdate.TabIndex = 16;
-            this.btnupdate.Text = "Update";
-            this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.Green;
+            this.btnUpdate.Location = new System.Drawing.Point(146, 454);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 50);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnclear
+            // btnClear
             // 
-            this.btnclear.BackColor = System.Drawing.Color.Yellow;
-            this.btnclear.Location = new System.Drawing.Point(275, 454);
-            this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(100, 50);
-            this.btnclear.TabIndex = 17;
-            this.btnclear.Text = "Clear";
-            this.btnclear.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.Yellow;
+            this.btnClear.Location = new System.Drawing.Point(275, 454);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 50);
+            this.btnClear.TabIndex = 17;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(20, 211);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(71, 20);
+            this.lblAddress.TabIndex = 9;
+            this.lblAddress.Text = "Address";
             // 
             // ApplicantProfileForm
             // 
@@ -234,8 +236,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(582, 603);
-            this.Controls.Add(this.btnclear);
-            this.Controls.Add(this.btnupdate);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbGender);
@@ -276,7 +278,6 @@
         private System.Windows.Forms.TextBox txtMiddleName;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.DateTimePicker dtpDOB;
@@ -284,7 +285,8 @@
         private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnupdate;
-        private System.Windows.Forms.Button btnclear;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label lblAddress;
     }
 }
