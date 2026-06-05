@@ -82,9 +82,18 @@
     <Compile Include="Forms\ApplicantProfileForm.Designer.cs">
       <DependentUpon>ApplicantProfileForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ApplicantDocumentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ApplicantDocumentsForm.Designer.cs">
+      <DependentUpon>ApplicantDocumentsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\UserSession.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ApplicantDocumentsForm.resx">
+      <DependentUpon>ApplicantDocumentsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ApplicantProfileForm.resx">
       <DependentUpon>ApplicantProfileForm.cs</DependentUpon>
     </EmbeddedResource>
