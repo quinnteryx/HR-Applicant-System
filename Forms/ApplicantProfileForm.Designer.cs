@@ -45,6 +45,8 @@
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnupdate = new System.Windows.Forms.Button();
+            this.btnclear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -206,12 +208,34 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             // 
+            // btnupdate
+            // 
+            this.btnupdate.BackColor = System.Drawing.Color.Green;
+            this.btnupdate.Location = new System.Drawing.Point(146, 454);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(100, 50);
+            this.btnupdate.TabIndex = 16;
+            this.btnupdate.Text = "Update";
+            this.btnupdate.UseVisualStyleBackColor = false;
+            // 
+            // btnclear
+            // 
+            this.btnclear.BackColor = System.Drawing.Color.Yellow;
+            this.btnclear.Location = new System.Drawing.Point(275, 454);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(100, 50);
+            this.btnclear.TabIndex = 17;
+            this.btnclear.Text = "Clear";
+            this.btnclear.UseVisualStyleBackColor = false;
+            // 
             // ApplicantProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(582, 603);
+            this.Controls.Add(this.btnclear);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbGender);
@@ -260,5 +284,7 @@
         private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnupdate;
+        private System.Windows.Forms.Button btnclear;
     }
 }
