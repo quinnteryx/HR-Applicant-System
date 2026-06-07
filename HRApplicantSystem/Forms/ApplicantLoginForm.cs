@@ -66,6 +66,9 @@ namespace HRApplicantSystem.Forms
                     MessageBox.Show("Welcome, " + email + "!",
                         "Login Successful", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
+
+                    WelcomeForm welcome = new WelcomeForm();
+                    welcome.ShowDialog();
                 }
                 else
                 {

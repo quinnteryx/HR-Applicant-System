@@ -67,6 +67,9 @@ namespace HRApplicantSystem.Forms
                         "\nRole: " + UserSession.Role,
                         "Login Successful", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
+
+                    WelcomeForm welcome = new WelcomeForm();
+                    welcome.ShowDialog();
                 }
                 else
                 {
