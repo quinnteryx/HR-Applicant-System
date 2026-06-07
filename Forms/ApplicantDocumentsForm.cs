@@ -20,16 +20,37 @@ namespace FINAL_PROJECT.Forms
         private void ApplicantDocumentsForm_Load(object sender, EventArgs e)
         {
             applicantID = UserSession.UserID;
-
-            cmbDocType.Items.Clear();
-            cmbDocType.Items.Add("Resume");
-            cmbDocType.Items.Add("Birth Certificate");
-            cmbDocType.Items.Add("Transcript of Records");
-            cmbDocType.Items.Add("NBI Clearance");
-            cmbDocType.Items.Add("Medical Certificate");
-            cmbDocType.Items.Add("Valid ID");
-
+            LoadDocumentTypes();
             LoadDocuments();
+        }
+
+        private void LoadDocumentTypes()
+        {
+            OleDbConnection con = DBConnection.GetConnection();
+            if (con == null) return;
+
+            try
+            {
+                con.Open();
+                string query = "SELECT RequirementName FROM RequirementTypes";
+                OleDbCommand cmd = new OleDbCommand(query, con);
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                cmbDocType.Items.Clear();
+                while (reader.Read())
+                    cmbDocType.Items.Add(reader["RequirementName"].ToString());
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading document types:\n" + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         private void LoadDocuments()
@@ -155,17 +176,30 @@ namespace FINAL_PROJECT.Forms
                 return;
             }
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this document?",
-                "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.No) return;
-
             OleDbConnection con = DBConnection.GetConnection();
             if (con == null) return;
 
             try
             {
                 con.Open();
+
+                string checkQuery = "SELECT Status FROM ApplicantDocuments WHERE DocumentID = @docid";
+                OleDbCommand checkCmd = new OleDbCommand(checkQuery, con);
+                checkCmd.Parameters.AddWithValue("@docid", selectedDocumentID);
+
+                object statusResult = checkCmd.ExecuteScalar();
+                if (statusResult != null && statusResult.ToString() == "Under Review")
+                {
+                    MessageBox.Show("This document is currently under review and cannot be deleted.",
+                        "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this document?",
+                    "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.No) return;
+
                 string query = "DELETE FROM ApplicantDocuments WHERE DocumentID = @docid";
                 OleDbCommand cmd = new OleDbCommand(query, con);
                 cmd.Parameters.AddWithValue("@docid", selectedDocumentID);

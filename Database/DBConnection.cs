@@ -20,8 +20,7 @@ namespace HRApplicantSystem.Database
             @"Database\HRDatabase.accdb");
 
         private static string connectionString =
-            $@"Provider=Microsoft.ACE.OLEDB.12.0;
-            Data Source={dbPath};";
+    $"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={dbPath};";
 
         public static OleDbConnection GetConnection()
         {

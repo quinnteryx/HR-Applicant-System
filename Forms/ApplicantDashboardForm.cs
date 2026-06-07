@@ -72,7 +72,7 @@ namespace FINAL_PROJECT.Forms
                     new System.Collections.Generic.List<string>();
 
                 while (reqReader.Read())
-                    allRequirements.Add(reqReader["RequirementName"].ToString());
+                    allRequirements.Add(reqReader["RequirementName"].ToString().Trim().ToLower());
 
                 reqReader.Close();
 
@@ -85,7 +85,7 @@ namespace FINAL_PROJECT.Forms
                     new System.Collections.Generic.List<string>();
 
                 while (subReader.Read())
-                    submittedDocs.Add(subReader["DocumentType"].ToString());
+                    submittedDocs.Add(subReader["DocumentType"].ToString().Trim().ToLower());
 
                 subReader.Close();
 
