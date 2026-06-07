@@ -1,0 +1,10 @@
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\bin\Debug\HRApplicantSystem.exe.config
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\bin\Debug\HRApplicantSystem.exe
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\bin\Debug\HRApplicantSystem.pdb
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.csproj.AssemblyReference.cache
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.JobVacancyForm.resources
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.Properties.Resources.resources
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.csproj.GenerateResource.cache
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.csproj.CoreCompileInputs.cache
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.exe
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.pdb
