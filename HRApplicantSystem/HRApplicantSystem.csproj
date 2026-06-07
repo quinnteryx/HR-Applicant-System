@@ -82,6 +82,18 @@
     <Compile Include="Forms\ApplicantLoginForm.Designer.cs">
       <DependentUpon>ApplicantLoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ApplicantRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ApplicantRegisterForm.Designer.cs">
+      <DependentUpon>ApplicantRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HRLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HRLoginForm.Designer.cs">
+      <DependentUpon>HRLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\HR\ApplicantReviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ApplicantLoginForm.resx">
       <DependentUpon>ApplicantLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ApplicantRegisterForm.resx">
+      <DependentUpon>ApplicantRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HRLoginForm.resx">
+      <DependentUpon>HRLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HR\HRDashboard.resx">
       <DependentUpon>HRDashboard.cs</DependentUpon>
