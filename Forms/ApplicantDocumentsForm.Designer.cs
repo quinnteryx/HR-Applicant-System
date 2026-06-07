@@ -2,15 +2,9 @@
 {
     partial class ApplicantDocumentsForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+        
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +16,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
@@ -40,9 +30,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocuments)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
+           
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.lblTitle.ForeColor = System.Drawing.Color.SteelBlue;
@@ -52,9 +40,7 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "My Documents";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgvDocuments
-            // 
+          
             this.dgvDocuments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDocuments.Location = new System.Drawing.Point(109, 48);
             this.dgvDocuments.Name = "dgvDocuments";
@@ -62,42 +48,32 @@
             this.dgvDocuments.RowTemplate.Height = 24;
             this.dgvDocuments.Size = new System.Drawing.Size(304, 338);
             this.dgvDocuments.TabIndex = 1;
-            // 
-            // lblDocType
-            // 
+            
             this.lblDocType.AutoSize = true;
             this.lblDocType.Location = new System.Drawing.Point(12, 415);
             this.lblDocType.Name = "lblDocType";
             this.lblDocType.Size = new System.Drawing.Size(103, 16);
             this.lblDocType.TabIndex = 2;
             this.lblDocType.Text = "Document Type";
-            // 
-            // cmbDocType
-            // 
+           
             this.cmbDocType.FormattingEnabled = true;
             this.cmbDocType.Location = new System.Drawing.Point(141, 415);
             this.cmbDocType.Name = "cmbDocType";
             this.cmbDocType.Size = new System.Drawing.Size(121, 24);
             this.cmbDocType.TabIndex = 3;
-            // 
-            // lblRemarks
-            // 
+           
             this.lblRemarks.AutoSize = true;
             this.lblRemarks.Location = new System.Drawing.Point(12, 457);
             this.lblRemarks.Name = "lblRemarks";
             this.lblRemarks.Size = new System.Drawing.Size(62, 16);
             this.lblRemarks.TabIndex = 4;
             this.lblRemarks.Text = "Remarks";
-            // 
-            // txtRemarks
-            // 
+          
             this.txtRemarks.Location = new System.Drawing.Point(141, 457);
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Size = new System.Drawing.Size(121, 22);
             this.txtRemarks.TabIndex = 5;
-            // 
-            // btnAdd
-            // 
+           
             this.btnAdd.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(15, 497);
@@ -107,9 +83,7 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnUpdate
-            // 
+           
             this.btnUpdate.BackColor = System.Drawing.Color.Green;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(153, 497);
@@ -119,9 +93,7 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
+            
             this.btnDelete.BackColor = System.Drawing.Color.Yellow;
             this.btnDelete.Location = new System.Drawing.Point(293, 497);
             this.btnDelete.Name = "btnDelete";
@@ -130,9 +102,7 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnBack
-            // 
+          
             this.btnBack.BackColor = System.Drawing.SystemColors.GrayText;
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(445, 497);
@@ -142,9 +112,7 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // ApplicantDocumentsForm
-            // 
+            
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 603);
