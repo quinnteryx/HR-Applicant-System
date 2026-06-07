@@ -113,5 +113,7 @@
         private System.Windows.Forms.DataGridView dgvJobs;
         private System.Windows.Forms.Button btnViewDetails;
         private System.Windows.Forms.Button btnApply;
+
+        /rraeada sdasdasdasdasd
     }
 }
