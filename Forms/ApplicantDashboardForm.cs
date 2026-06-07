@@ -21,6 +21,7 @@ namespace FINAL_PROJECT.Forms
             LoadStatus();
             LoadMissingDocuments();
             LoadInterviewSchedule();
+            LoadRecentUpdates();
         }
 
         private void LoadStatus()
@@ -142,6 +143,57 @@ namespace FINAL_PROJECT.Forms
             catch (Exception ex)
             {
                 lblInterviewSchedule.Text = "Error loading schedule.";
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void LoadRecentUpdates()
+        {
+            lstRecentUpdates.Items.Clear();
+
+            OleDbConnection con = DBConnection.GetConnection();
+            if (con == null) return;
+
+            try
+            {
+                con.Open();
+                string query = @"SELECT TOP 5 Status, Remarks, ChangedDate 
+                                FROM ApplicationStatusHistory 
+                                WHERE ApplicantID = @id 
+                                ORDER BY ChangedDate DESC";
+                OleDbCommand cmd = new OleDbCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", applicantID);
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                bool hasUpdates = false;
+                while (reader.Read())
+                {
+                    hasUpdates = true;
+                    string date = "";
+                    if (reader["ChangedDate"] != DBNull.Value)
+                        date = Convert.ToDateTime(reader["ChangedDate"]).ToString("MMM dd, yyyy");
+
+                    string status = reader["Status"].ToString();
+                    string remarks = reader["Remarks"] != DBNull.Value ? reader["Remarks"].ToString() : "";
+
+                    if (remarks != "")
+                        lstRecentUpdates.Items.Add($"[{date}] {status} - {remarks}");
+                    else
+                        lstRecentUpdates.Items.Add($"[{date}] {status}");
+                }
+
+                reader.Close();
+
+                if (!hasUpdates)
+                    lstRecentUpdates.Items.Add("No recent updates.");
+            }
+            catch (Exception ex)
+            {
+                lstRecentUpdates.Items.Add("Error loading updates.");
             }
             finally
             {

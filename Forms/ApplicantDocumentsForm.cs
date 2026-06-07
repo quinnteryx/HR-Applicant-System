@@ -61,7 +61,7 @@ namespace FINAL_PROJECT.Forms
             try
             {
                 con.Open();
-                string query = "SELECT * FROM ApplicantDocuments WHERE ApplicantID = @id";
+                string query = "SELECT DocumentID, DocumentType, Remarks, Status FROM ApplicantDocuments WHERE ApplicantID = @id";
                 OleDbCommand cmd = new OleDbCommand(query, con);
                 cmd.Parameters.AddWithValue("@id", applicantID);
 
@@ -70,6 +70,38 @@ namespace FINAL_PROJECT.Forms
                 adapter.Fill(dt);
 
                 dgvDocuments.DataSource = dt;
+
+                // Hide the ID column but keep it for reference
+                if (dgvDocuments.Columns["DocumentID"] != null)
+                    dgvDocuments.Columns["DocumentID"].Visible = false;
+
+                // Set friendly column headers
+                if (dgvDocuments.Columns["DocumentType"] != null)
+                    dgvDocuments.Columns["DocumentType"].HeaderText = "Document Type";
+
+                if (dgvDocuments.Columns["Remarks"] != null)
+                    dgvDocuments.Columns["Remarks"].HeaderText = "Remarks";
+
+                if (dgvDocuments.Columns["Status"] != null)
+                {
+                    dgvDocuments.Columns["Status"].HeaderText = "Status";
+                    dgvDocuments.Columns["Status"].Width = 100;
+                }
+
+                // Color code rows by status
+                foreach (DataGridViewRow row in dgvDocuments.Rows)
+                {
+                    if (row.Cells["Status"].Value != null)
+                    {
+                        string status = row.Cells["Status"].Value.ToString();
+                        if (status == "Under Review")
+                            row.DefaultCellStyle.BackColor = System.Drawing.Color.LightYellow;
+                        else if (status == "Submitted")
+                            row.DefaultCellStyle.BackColor = System.Drawing.Color.LightGreen;
+                        else if (status == "Missing")
+                            row.DefaultCellStyle.BackColor = System.Drawing.Color.LightCoral;
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -98,13 +130,14 @@ namespace FINAL_PROJECT.Forms
             {
                 con.Open();
                 string query = @"INSERT INTO ApplicantDocuments 
-                    (ApplicantID, DocumentType, Remarks)
-                    VALUES (@id, @doctype, @remarks)";
+                    (ApplicantID, DocumentType, Remarks, Status)
+                    VALUES (@id, @doctype, @remarks, @status)";
 
                 OleDbCommand cmd = new OleDbCommand(query, con);
                 cmd.Parameters.AddWithValue("@id", applicantID);
                 cmd.Parameters.AddWithValue("@doctype", cmbDocType.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@remarks", txtRemarks.Text.Trim());
+                cmd.Parameters.AddWithValue("@status", "Submitted");
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Document added successfully!", "Success",
