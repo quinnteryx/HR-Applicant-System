@@ -28,12 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lstHistory = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // lstHistory
+            // 
+            this.lstHistory.FormattingEnabled = true;
+            this.lstHistory.Location = new System.Drawing.Point(1, 122);
+            this.lstHistory.Name = "lstHistory";
+            this.lstHistory.Size = new System.Drawing.Size(1486, 706);
+            this.lstHistory.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(688, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Application Status History";
+            // 
+            // ApplicationStatusForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "ApplicationStatusForm";
+            this.ClientSize = new System.Drawing.Size(1490, 828);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lstHistory);
+            this.Name = "ApplicationStatusForm";
+            this.Text = "X";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox lstHistory;
+        private System.Windows.Forms.Label label1;
     }
 }

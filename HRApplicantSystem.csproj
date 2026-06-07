@@ -72,8 +72,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ApplicationStatusForm.resx">
+      <DependentUpon>ApplicationStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JobVacancyForm.resx">
       <DependentUpon>JobVacancyForm.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>JobVacancyForm1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyApplicationsForm.resx">
+      <DependentUpon>MyApplicationsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

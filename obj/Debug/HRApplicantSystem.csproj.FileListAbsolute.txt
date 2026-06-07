@@ -8,3 +8,5 @@ C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRAppl
 C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.csproj.CoreCompileInputs.cache
 C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.exe
 C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.pdb
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.MyApplicationsForm.resources
+C:\Users\djcal\source\repos\HRApplicantSystem\HRApplicantSystem\obj\Debug\HRApplicantSystem.ApplicationStatusForm.resources

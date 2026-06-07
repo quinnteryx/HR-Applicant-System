@@ -8,7 +8,7 @@ namespace HRApplicantSystem
     public partial class JobVacancyForm : Form
     {
         private List<Job> jobs = new List<Job>();
-        private List<JobApplication> applications = new List<JobApplication>();
+        public static List<JobApplication> applications = new List<JobApplication>();
 
         public JobVacancyForm()
         {
@@ -135,10 +135,17 @@ namespace HRApplicantSystem
             {
                 JobID = jobID,
                 Position = position,
-                Status = "Submitted"
+                Status = "Submitted",
+                DateApplied = DateTime.Now
             });
 
             MessageBox.Show("Application submitted successfully.");
+        }
+
+        private void btnMyApplications_Click(object sender, EventArgs e)
+        {
+            MyApplicationsForm form = new MyApplicationsForm();
+            form.ShowDialog();
         }
     }
 
@@ -153,5 +160,7 @@ namespace HRApplicantSystem
         public string JobID { get; set; }
         public string Position { get; set; }
         public string Status { get; set; }
+
+        public DateTime DateApplied { get; set; }
     }
 }

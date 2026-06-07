@@ -29,6 +29,7 @@
             this.dgvJobs = new System.Windows.Forms.DataGridView();
             this.btnViewDetails = new System.Windows.Forms.Button();
             this.btnApply = new System.Windows.Forms.Button();
+            this.btnMyApplications = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,11 +87,22 @@
             this.btnApply.UseVisualStyleBackColor = true;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
+            // btnMyApplications
+            // 
+            this.btnMyApplications.Location = new System.Drawing.Point(787, 17);
+            this.btnMyApplications.Name = "btnMyApplications";
+            this.btnMyApplications.Size = new System.Drawing.Size(105, 23);
+            this.btnMyApplications.TabIndex = 6;
+            this.btnMyApplications.Text = "My Applications";
+            this.btnMyApplications.UseVisualStyleBackColor = true;
+            this.btnMyApplications.Click += new System.EventHandler(this.btnMyApplications_Click);
+            // 
             // JobVacancyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1458, 655);
+            this.Controls.Add(this.btnMyApplications);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnViewDetails);
             this.Controls.Add(this.dgvJobs);
@@ -114,6 +126,6 @@
         private System.Windows.Forms.Button btnViewDetails;
         private System.Windows.Forms.Button btnApply;
 
-        /rraeada sdasdasdasdasd
+private System.Windows.Forms.Button btnMyApplications;
     }
 }
