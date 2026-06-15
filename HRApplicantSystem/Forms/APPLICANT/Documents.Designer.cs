@@ -52,11 +52,12 @@
             // lblApplicantID
             // 
             this.lblApplicantID.AutoSize = true;
-            this.lblApplicantID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApplicantID.Location = new System.Drawing.Point(158, 9);
+            this.lblApplicantID.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.lblApplicantID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblApplicantID.Location = new System.Drawing.Point(141, 22);
             this.lblApplicantID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApplicantID.Name = "lblApplicantID";
-            this.lblApplicantID.Size = new System.Drawing.Size(114, 17);
+            this.lblApplicantID.Size = new System.Drawing.Size(181, 29);
             this.lblApplicantID.TabIndex = 0;
             this.lblApplicantID.Text = "Applicant ID: 0";
             this.lblApplicantID.Click += new System.EventHandler(this.lblApplicantID_Click);
@@ -74,13 +75,13 @@
             this.Status,
             this.HRRemarks});
             this.dgvDocuments.Location = new System.Drawing.Point(14, 74);
-            this.dgvDocuments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDocuments.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDocuments.Name = "dgvDocuments";
             this.dgvDocuments.ReadOnly = true;
             this.dgvDocuments.RowHeadersWidth = 62;
             this.dgvDocuments.RowTemplate.Height = 28;
             this.dgvDocuments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDocuments.Size = new System.Drawing.Size(427, 130);
+            this.dgvDocuments.Size = new System.Drawing.Size(427, 162);
             this.dgvDocuments.TabIndex = 1;
             this.dgvDocuments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocuments_CellContentClick);
             // 
@@ -145,7 +146,7 @@
             this.lblMissingRequirements.AutoSize = true;
             this.lblMissingRequirements.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMissingRequirements.ForeColor = System.Drawing.Color.Red;
-            this.lblMissingRequirements.Location = new System.Drawing.Point(14, 206);
+            this.lblMissingRequirements.Location = new System.Drawing.Point(16, 238);
             this.lblMissingRequirements.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMissingRequirements.Name = "lblMissingRequirements";
             this.lblMissingRequirements.Size = new System.Drawing.Size(215, 17);
@@ -155,8 +156,8 @@
             // 
             // txtDocumentName
             // 
-            this.txtDocumentName.Location = new System.Drawing.Point(14, 260);
-            this.txtDocumentName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDocumentName.Location = new System.Drawing.Point(16, 292);
+            this.txtDocumentName.Margin = new System.Windows.Forms.Padding(2);
             this.txtDocumentName.Name = "txtDocumentName";
             this.txtDocumentName.Size = new System.Drawing.Size(203, 20);
             this.txtDocumentName.TabIndex = 3;
@@ -164,64 +165,80 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(279, 287);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.BackColor = System.Drawing.Color.Green;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAdd.Location = new System.Drawing.Point(59, 332);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(80, 20);
+            this.btnAdd.Size = new System.Drawing.Size(80, 40);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add Document";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(178, 322);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.BackColor = System.Drawing.Color.Blue;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Location = new System.Drawing.Point(59, 379);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(80, 20);
+            this.btnUpdate.Size = new System.Drawing.Size(80, 46);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update Document";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(325, 322);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Location = new System.Drawing.Point(179, 354);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(80, 20);
+            this.btnDelete.Size = new System.Drawing.Size(80, 46);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Delete Document";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(33, 322);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRefresh.Location = new System.Drawing.Point(313, 332);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(67, 20);
+            this.btnRefresh.Size = new System.Drawing.Size(80, 46);
             this.btnRefresh.TabIndex = 8;
             this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(14, 31);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(313, 382);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(67, 31);
+            this.btnBack.Size = new System.Drawing.Size(80, 40);
             this.btnBack.TabIndex = 9;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblDocumentName
             // 
             this.lblDocumentName.AutoSize = true;
             this.lblDocumentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblDocumentName.Location = new System.Drawing.Point(11, 225);
+            this.lblDocumentName.ForeColor = System.Drawing.Color.Green;
+            this.lblDocumentName.Location = new System.Drawing.Point(13, 257);
             this.lblDocumentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDocumentName.Name = "lblDocumentName";
             this.lblDocumentName.Size = new System.Drawing.Size(183, 26);
@@ -233,7 +250,8 @@
             // 
             this.lblRequirementType.AutoSize = true;
             this.lblRequirementType.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblRequirementType.Location = new System.Drawing.Point(227, 225);
+            this.lblRequirementType.ForeColor = System.Drawing.Color.Green;
+            this.lblRequirementType.Location = new System.Drawing.Point(229, 257);
             this.lblRequirementType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRequirementType.Name = "lblRequirementType";
             this.lblRequirementType.Size = new System.Drawing.Size(196, 26);
@@ -244,8 +262,8 @@
             // cmbRequirementType
             // 
             this.cmbRequirementType.FormattingEnabled = true;
-            this.cmbRequirementType.Location = new System.Drawing.Point(289, 260);
-            this.cmbRequirementType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbRequirementType.Location = new System.Drawing.Point(291, 292);
+            this.cmbRequirementType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRequirementType.Name = "cmbRequirementType";
             this.cmbRequirementType.Size = new System.Drawing.Size(116, 21);
             this.cmbRequirementType.TabIndex = 12;
@@ -254,7 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 353);
+            this.ClientSize = new System.Drawing.Size(459, 436);
             this.Controls.Add(this.cmbRequirementType);
             this.Controls.Add(this.lblRequirementType);
             this.Controls.Add(this.lblDocumentName);
@@ -267,7 +285,7 @@
             this.Controls.Add(this.lblMissingRequirements);
             this.Controls.Add(this.dgvDocuments);
             this.Controls.Add(this.lblApplicantID);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DocumentsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Documents";

@@ -20,6 +20,7 @@
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.dgvApplications = new System.Windows.Forms.DataGridView();
             this.grpDetails = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lblLockMessage = new System.Windows.Forms.Label();
             this.btnWithdraw = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -27,7 +28,6 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
@@ -92,13 +92,27 @@
             this.grpDetails.TabStop = false;
             this.grpDetails.Text = "Application Status Details";
             // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(20, 309);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(366, 39);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // lblLockMessage
             // 
             this.lblLockMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblLockMessage.AutoSize = true;
             this.lblLockMessage.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLockMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.lblLockMessage.Location = new System.Drawing.Point(20, 200);
+            this.lblLockMessage.Location = new System.Drawing.Point(17, 155);
             this.lblLockMessage.Name = "lblLockMessage";
             this.lblLockMessage.Size = new System.Drawing.Size(318, 13);
             this.lblLockMessage.TabIndex = 5;
@@ -109,24 +123,30 @@
             // 
             this.btnWithdraw.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnWithdraw.Location = new System.Drawing.Point(20, 284);
+            this.btnWithdraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnWithdraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnWithdraw.ForeColor = System.Drawing.Color.White;
+            this.btnWithdraw.Location = new System.Drawing.Point(20, 242);
             this.btnWithdraw.Name = "btnWithdraw";
             this.btnWithdraw.Size = new System.Drawing.Size(366, 45);
             this.btnWithdraw.TabIndex = 4;
             this.btnWithdraw.Text = "Withdraw Application";
-            this.btnWithdraw.UseVisualStyleBackColor = true;
+            this.btnWithdraw.UseVisualStyleBackColor = false;
             this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
             // 
             // btnSubmit
             // 
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmit.Location = new System.Drawing.Point(20, 233);
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(20, 181);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(366, 45);
             this.btnSubmit.TabIndex = 3;
             this.btnSubmit.Text = "Submit Application";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblDate
@@ -134,7 +154,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblDate.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblDate.Location = new System.Drawing.Point(313, 104);
+            this.lblDate.Location = new System.Drawing.Point(215, 104);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(73, 15);
             this.lblDate.TabIndex = 2;
@@ -145,7 +165,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblStatus.Location = new System.Drawing.Point(331, 75);
+            this.lblStatus.Location = new System.Drawing.Point(214, 76);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(55, 19);
             this.lblStatus.TabIndex = 1;
@@ -155,6 +175,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.Green;
             this.lblTitle.Location = new System.Drawing.Point(214, 39);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(172, 21);
@@ -170,23 +191,11 @@
             this.pnlHeader.Size = new System.Drawing.Size(850, 60);
             this.pnlHeader.TabIndex = 1;
             // 
-            // btnBack
-            // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnBack.Location = new System.Drawing.Point(20, 335);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(366, 39);
-            this.btnBack.TabIndex = 1;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblHeader.Location = new System.Drawing.Point(303, 15);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(224, 30);

@@ -18,8 +18,8 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.dgvStatusSummary = new System.Windows.Forms.DataGridView();
             this.grpTracking = new System.Windows.Forms.GroupBox();
@@ -73,26 +73,31 @@
             this.pnlHeader.Size = new System.Drawing.Size(960, 60);
             this.pnlHeader.TabIndex = 1;
             // 
-            // btnBack
-            // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBack.Location = new System.Drawing.Point(371, 324);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(85, 30);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "Back";
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
+            this.lblHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblHeader.Location = new System.Drawing.Point(334, 9);
+            this.lblHeader.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblHeader.Location = new System.Drawing.Point(359, 18);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(277, 30);
             this.lblHeader.TabIndex = 1;
             this.lblHeader.Text = "Applicant Status Tracking";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.Red;
+            this.btnBack.Location = new System.Drawing.Point(165, 279);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(140, 54);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // splitContainer
             // 
@@ -103,14 +108,14 @@
             // splitContainer.Panel1
             // 
             this.splitContainer.Panel1.Controls.Add(this.dgvStatusSummary);
-            this.splitContainer.Panel1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.splitContainer.Panel1.Padding = new System.Windows.Forms.Padding(10);
             // 
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.grpTracking);
-            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.splitContainer.Size = new System.Drawing.Size(960, 500);
-            this.splitContainer.SplitterDistance = 429;
+            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(10);
+            this.splitContainer.Size = new System.Drawing.Size(960, 482);
+            this.splitContainer.SplitterDistance = 428;
             this.splitContainer.TabIndex = 0;
             // 
             // dgvStatusSummary
@@ -120,7 +125,7 @@
             this.dgvStatusSummary.Location = new System.Drawing.Point(10, 10);
             this.dgvStatusSummary.Name = "dgvStatusSummary";
             this.dgvStatusSummary.RowHeadersWidth = 51;
-            this.dgvStatusSummary.Size = new System.Drawing.Size(409, 480);
+            this.dgvStatusSummary.Size = new System.Drawing.Size(408, 462);
             this.dgvStatusSummary.TabIndex = 0;
             this.dgvStatusSummary.SelectionChanged += new System.EventHandler(this.dgvStatusSummary_SelectionChanged);
             // 
@@ -132,7 +137,7 @@
             this.grpTracking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpTracking.Location = new System.Drawing.Point(10, 10);
             this.grpTracking.Name = "grpTracking";
-            this.grpTracking.Size = new System.Drawing.Size(507, 480);
+            this.grpTracking.Size = new System.Drawing.Size(508, 462);
             this.grpTracking.TabIndex = 0;
             this.grpTracking.TabStop = false;
             this.grpTracking.Text = "Application Status Center";
@@ -152,7 +157,7 @@
             this.tcStatusDetails.Location = new System.Drawing.Point(15, 80);
             this.tcStatusDetails.Name = "tcStatusDetails";
             this.tcStatusDetails.SelectedIndex = 0;
-            this.tcStatusDetails.Size = new System.Drawing.Size(477, 385);
+            this.tcStatusDetails.Size = new System.Drawing.Size(478, 367);
             this.tcStatusDetails.TabIndex = 0;
             // 
             // tpTimeline
@@ -162,8 +167,8 @@
             this.tpTimeline.Controls.Add(this.lstTrackingTimeline);
             this.tpTimeline.Location = new System.Drawing.Point(4, 24);
             this.tpTimeline.Name = "tpTimeline";
-            this.tpTimeline.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.tpTimeline.Size = new System.Drawing.Size(469, 357);
+            this.tpTimeline.Padding = new System.Windows.Forms.Padding(10);
+            this.tpTimeline.Size = new System.Drawing.Size(470, 339);
             this.tpTimeline.TabIndex = 0;
             this.tpTimeline.Text = "Timeline";
             // 
@@ -185,7 +190,7 @@
             this.lstTrackingTimeline.ItemHeight = 15;
             this.lstTrackingTimeline.Location = new System.Drawing.Point(10, 30);
             this.lstTrackingTimeline.Name = "lstTrackingTimeline";
-            this.lstTrackingTimeline.Size = new System.Drawing.Size(446, 289);
+            this.lstTrackingTimeline.Size = new System.Drawing.Size(447, 199);
             this.lstTrackingTimeline.TabIndex = 1;
             // 
             // tpScreening
@@ -196,8 +201,8 @@
             this.tpScreening.Controls.Add(this.lblScreeningRemarks);
             this.tpScreening.Location = new System.Drawing.Point(4, 24);
             this.tpScreening.Name = "tpScreening";
-            this.tpScreening.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
-            this.tpScreening.Size = new System.Drawing.Size(469, 357);
+            this.tpScreening.Padding = new System.Windows.Forms.Padding(15);
+            this.tpScreening.Size = new System.Drawing.Size(470, 357);
             this.tpScreening.TabIndex = 1;
             this.tpScreening.Text = "1. Screening";
             // 
@@ -251,8 +256,8 @@
             this.tpInterview.Controls.Add(this.lblInterviewStatus);
             this.tpInterview.Location = new System.Drawing.Point(4, 24);
             this.tpInterview.Name = "tpInterview";
-            this.tpInterview.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
-            this.tpInterview.Size = new System.Drawing.Size(469, 357);
+            this.tpInterview.Padding = new System.Windows.Forms.Padding(15);
+            this.tpInterview.Size = new System.Drawing.Size(470, 357);
             this.tpInterview.TabIndex = 2;
             this.tpInterview.Text = "2. Interview";
             // 
@@ -311,8 +316,8 @@
             this.tpEvaluation.Controls.Add(this.lblEvalRemarks);
             this.tpEvaluation.Location = new System.Drawing.Point(4, 24);
             this.tpEvaluation.Name = "tpEvaluation";
-            this.tpEvaluation.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
-            this.tpEvaluation.Size = new System.Drawing.Size(469, 357);
+            this.tpEvaluation.Padding = new System.Windows.Forms.Padding(15);
+            this.tpEvaluation.Size = new System.Drawing.Size(470, 357);
             this.tpEvaluation.TabIndex = 3;
             this.tpEvaluation.Text = "3. Evaluation";
             // 
@@ -372,8 +377,8 @@
             this.tpHiring.Controls.Add(this.lblRemarksText);
             this.tpHiring.Location = new System.Drawing.Point(4, 24);
             this.tpHiring.Name = "tpHiring";
-            this.tpHiring.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
-            this.tpHiring.Size = new System.Drawing.Size(469, 357);
+            this.tpHiring.Padding = new System.Windows.Forms.Padding(15);
+            this.tpHiring.Size = new System.Drawing.Size(470, 357);
             this.tpHiring.TabIndex = 4;
             this.tpHiring.Text = "4. Final Decision";
             // 
@@ -402,11 +407,11 @@
             // lblCurrentState
             // 
             this.lblCurrentState.AutoSize = true;
-            this.lblCurrentState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCurrentState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.lblCurrentState.Location = new System.Drawing.Point(357, 58);
+            this.lblCurrentState.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.lblCurrentState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lblCurrentState.Location = new System.Drawing.Point(272, 45);
             this.lblCurrentState.Name = "lblCurrentState";
-            this.lblCurrentState.Size = new System.Drawing.Size(118, 19);
+            this.lblCurrentState.Size = new System.Drawing.Size(204, 32);
             this.lblCurrentState.TabIndex = 1;
             this.lblCurrentState.Text = "Current Status: --";
             // 
@@ -414,7 +419,8 @@
             // 
             this.lblSelectedJob.AutoSize = true;
             this.lblSelectedJob.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSelectedJob.Location = new System.Drawing.Point(303, 16);
+            this.lblSelectedJob.ForeColor = System.Drawing.Color.Green;
+            this.lblSelectedJob.Location = new System.Drawing.Point(15, 55);
             this.lblSelectedJob.Name = "lblSelectedJob";
             this.lblSelectedJob.Size = new System.Drawing.Size(172, 21);
             this.lblSelectedJob.TabIndex = 2;
@@ -424,7 +430,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 560);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(960, 542);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.pnlHeader);
             this.Name = "ApplicationStatusForm";

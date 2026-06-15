@@ -56,32 +56,41 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(782, 18);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(766, 14);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(85, 25);
+            this.btnBack.Size = new System.Drawing.Size(101, 36);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(691, 17);
+            this.btnReset.BackColor = System.Drawing.Color.Red;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReset.Location = new System.Drawing.Point(630, 13);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(85, 25);
+            this.btnReset.Size = new System.Drawing.Size(111, 37);
             this.btnReset.TabIndex = 4;
             this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(445, 17);
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearch.Location = new System.Drawing.Point(445, 14);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(85, 25);
+            this.btnSearch.Size = new System.Drawing.Size(89, 33);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbDepartment
@@ -125,7 +134,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.grpJobDetails);
             this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.splitContainer1.Size = new System.Drawing.Size(900, 490);
+            this.splitContainer1.Size = new System.Drawing.Size(900, 438);
             this.splitContainer1.SplitterDistance = 420;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -143,7 +152,7 @@
             this.dgvJobs.ReadOnly = true;
             this.dgvJobs.RowHeadersVisible = false;
             this.dgvJobs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvJobs.Size = new System.Drawing.Size(400, 470);
+            this.dgvJobs.Size = new System.Drawing.Size(400, 418);
             this.dgvJobs.TabIndex = 0;
             this.dgvJobs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJobs_CellContentClick);
             this.dgvJobs.SelectionChanged += new System.EventHandler(this.dgvJobs_SelectionChanged);
@@ -160,7 +169,7 @@
             this.grpJobDetails.ForeColor = System.Drawing.Color.Green;
             this.grpJobDetails.Location = new System.Drawing.Point(10, 10);
             this.grpJobDetails.Name = "grpJobDetails";
-            this.grpJobDetails.Size = new System.Drawing.Size(456, 470);
+            this.grpJobDetails.Size = new System.Drawing.Size(456, 418);
             this.grpJobDetails.TabIndex = 0;
             this.grpJobDetails.TabStop = false;
             this.grpJobDetails.Text = "Job Specifications";
@@ -172,9 +181,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnApply.BackColor = System.Drawing.Color.Green;
             this.btnApply.ForeColor = System.Drawing.Color.White;
-            this.btnApply.Location = new System.Drawing.Point(60, 216);
+            this.btnApply.Location = new System.Drawing.Point(77, 195);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(308, 40);
+            this.btnApply.Size = new System.Drawing.Size(308, 60);
             this.btnApply.TabIndex = 3;
             this.btnApply.Text = "Apply for this Job";
             this.btnApply.UseVisualStyleBackColor = false;
@@ -186,12 +195,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescription.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDescription.Location = new System.Drawing.Point(0, 117);
+            this.txtDescription.Location = new System.Drawing.Point(17, 121);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ReadOnly = true;
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescription.Size = new System.Drawing.Size(416, 93);
+            this.txtDescription.Size = new System.Drawing.Size(416, 41);
             this.txtDescription.TabIndex = 2;
             // 
             // lblDept
@@ -221,7 +230,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(900, 550);
+            this.ClientSize = new System.Drawing.Size(900, 498);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.pnlSearch);
             this.Name = "JobVacancyForm";

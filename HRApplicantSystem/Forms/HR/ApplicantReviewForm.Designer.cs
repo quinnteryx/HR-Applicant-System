@@ -47,14 +47,16 @@
             this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplications)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Green;
-            this.lblTitle.Location = new System.Drawing.Point(178, 25);
+            this.lblTitle.Location = new System.Drawing.Point(327, 9);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(289, 24);
@@ -66,18 +68,19 @@
             // 
             this.dgvApplications.BackgroundColor = System.Drawing.Color.Chartreuse;
             this.dgvApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvApplications.Location = new System.Drawing.Point(43, 51);
-            this.dgvApplications.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvApplications.Location = new System.Drawing.Point(43, 88);
+            this.dgvApplications.Margin = new System.Windows.Forms.Padding(2);
             this.dgvApplications.Name = "dgvApplications";
             this.dgvApplications.RowHeadersWidth = 51;
             this.dgvApplications.RowTemplate.Height = 24;
-            this.dgvApplications.Size = new System.Drawing.Size(566, 122);
+            this.dgvApplications.Size = new System.Drawing.Size(561, 122);
             this.dgvApplications.TabIndex = 1;
             this.dgvApplications.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApplications_CellClick);
             this.dgvApplications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApplications_CellContentClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.txtReviewSkills);
             this.groupBox1.Controls.Add(this.txtReviewEducation);
             this.groupBox1.Controls.Add(this.txtReviewContact);
@@ -88,10 +91,10 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtFirstName);
-            this.groupBox1.Location = new System.Drawing.Point(43, 201);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(43, 239);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(247, 186);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -101,7 +104,7 @@
             // txtReviewSkills
             // 
             this.txtReviewSkills.Location = new System.Drawing.Point(111, 148);
-            this.txtReviewSkills.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReviewSkills.Margin = new System.Windows.Forms.Padding(2);
             this.txtReviewSkills.Name = "txtReviewSkills";
             this.txtReviewSkills.ReadOnly = true;
             this.txtReviewSkills.Size = new System.Drawing.Size(76, 20);
@@ -110,7 +113,7 @@
             // txtReviewEducation
             // 
             this.txtReviewEducation.Location = new System.Drawing.Point(111, 118);
-            this.txtReviewEducation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReviewEducation.Margin = new System.Windows.Forms.Padding(2);
             this.txtReviewEducation.Name = "txtReviewEducation";
             this.txtReviewEducation.ReadOnly = true;
             this.txtReviewEducation.Size = new System.Drawing.Size(76, 20);
@@ -119,7 +122,7 @@
             // txtReviewContact
             // 
             this.txtReviewContact.Location = new System.Drawing.Point(111, 82);
-            this.txtReviewContact.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReviewContact.Margin = new System.Windows.Forms.Padding(2);
             this.txtReviewContact.Name = "txtReviewContact";
             this.txtReviewContact.ReadOnly = true;
             this.txtReviewContact.Size = new System.Drawing.Size(76, 20);
@@ -128,7 +131,7 @@
             // txtReviewLastName
             // 
             this.txtReviewLastName.Location = new System.Drawing.Point(111, 46);
-            this.txtReviewLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReviewLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtReviewLastName.Name = "txtReviewLastName";
             this.txtReviewLastName.ReadOnly = true;
             this.txtReviewLastName.Size = new System.Drawing.Size(76, 20);
@@ -137,7 +140,7 @@
             // txtReviewFirstName
             // 
             this.txtReviewFirstName.Location = new System.Drawing.Point(111, 17);
-            this.txtReviewFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReviewFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtReviewFirstName.Name = "txtReviewFirstName";
             this.txtReviewFirstName.ReadOnly = true;
             this.txtReviewFirstName.Size = new System.Drawing.Size(76, 20);
@@ -196,11 +199,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(326, 234);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.lstApplicantDocuments);
+            this.groupBox2.Location = new System.Drawing.Point(331, 240);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(273, 135);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(273, 168);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Documents";
@@ -209,46 +214,53 @@
             // lstApplicantDocuments
             // 
             this.lstApplicantDocuments.FormattingEnabled = true;
-            this.lstApplicantDocuments.Location = new System.Drawing.Point(326, 202);
-            this.lstApplicantDocuments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstApplicantDocuments.Location = new System.Drawing.Point(4, 17);
+            this.lstApplicantDocuments.Margin = new System.Windows.Forms.Padding(2);
             this.lstApplicantDocuments.Name = "lstApplicantDocuments";
-            this.lstApplicantDocuments.Size = new System.Drawing.Size(273, 186);
+            this.lstApplicantDocuments.Size = new System.Drawing.Size(269, 147);
             this.lstApplicantDocuments.TabIndex = 0;
             // 
             // btnLockApplication
             // 
-            this.btnLockApplication.Location = new System.Drawing.Point(61, 391);
-            this.btnLockApplication.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLockApplication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnLockApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnLockApplication.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLockApplication.Location = new System.Drawing.Point(283, 446);
+            this.btnLockApplication.Margin = new System.Windows.Forms.Padding(2);
             this.btnLockApplication.Name = "btnLockApplication";
             this.btnLockApplication.Size = new System.Drawing.Size(178, 40);
             this.btnLockApplication.TabIndex = 6;
             this.btnLockApplication.Text = "Lock Application";
-            this.btnLockApplication.UseVisualStyleBackColor = true;
+            this.btnLockApplication.UseVisualStyleBackColor = false;
             this.btnLockApplication.Click += new System.EventHandler(this.btnLockApplication_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(381, 392);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(481, 446);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(176, 40);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // ApplicantReviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 466);
-            this.Controls.Add(this.lstApplicantDocuments);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(682, 497);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnLockApplication);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvApplications);
             this.Controls.Add(this.lblTitle);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ApplicantReviewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ApplicantReviewForm";
@@ -256,6 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplications)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

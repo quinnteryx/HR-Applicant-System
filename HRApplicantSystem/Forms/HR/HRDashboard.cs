@@ -91,5 +91,10 @@ namespace HRApplicantSystem.Forms.HR
             // 3. Close the current dashboard
             this.Close();
         }
+
+        private void HRDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

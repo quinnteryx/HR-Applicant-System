@@ -58,10 +58,10 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblHeader.Location = new System.Drawing.Point(25, 15);
+            this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblHeader.Location = new System.Drawing.Point(305, 9);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(221, 30);
+            this.lblHeader.Size = new System.Drawing.Size(225, 30);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "APPLICANT PROFILE";
             // 
@@ -80,7 +80,7 @@
             // 
             this.txtFirstName.Location = new System.Drawing.Point(30, 78);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(110, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(110, 20);
             this.txtFirstName.TabIndex = 2;
             // 
             // lblMiddleName
@@ -98,7 +98,7 @@
             // 
             this.txtMiddleName.Location = new System.Drawing.Point(155, 78);
             this.txtMiddleName.Name = "txtMiddleName";
-            this.txtMiddleName.Size = new System.Drawing.Size(110, 22);
+            this.txtMiddleName.Size = new System.Drawing.Size(110, 20);
             this.txtMiddleName.TabIndex = 4;
             // 
             // lblLastName
@@ -116,7 +116,7 @@
             // 
             this.txtLastName.Location = new System.Drawing.Point(280, 78);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(110, 22);
+            this.txtLastName.Size = new System.Drawing.Size(110, 20);
             this.txtLastName.TabIndex = 6;
             // 
             // lblBirthday
@@ -135,7 +135,7 @@
             this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirthday.Location = new System.Drawing.Point(30, 133);
             this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(170, 22);
+            this.dtpBirthday.Size = new System.Drawing.Size(170, 20);
             this.dtpBirthday.TabIndex = 8;
             // 
             // lblGender
@@ -145,7 +145,7 @@
             this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.lblGender.Location = new System.Drawing.Point(220, 115);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(51, 15);
+            this.lblGender.Size = new System.Drawing.Size(52, 15);
             this.lblGender.TabIndex = 9;
             this.lblGender.Text = "Gender:";
             // 
@@ -173,7 +173,7 @@
             // 
             this.txtContactNumber.Location = new System.Drawing.Point(30, 188);
             this.txtContactNumber.Name = "txtContactNumber";
-            this.txtContactNumber.Size = new System.Drawing.Size(360, 22);
+            this.txtContactNumber.Size = new System.Drawing.Size(360, 20);
             this.txtContactNumber.TabIndex = 12;
             // 
             // lblAddress
@@ -243,7 +243,7 @@
             this.lblWorkExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.lblWorkExperience.Location = new System.Drawing.Point(430, 280);
             this.lblWorkExperience.Name = "lblWorkExperience";
-            this.lblWorkExperience.Size = new System.Drawing.Size(104, 15);
+            this.lblWorkExperience.Size = new System.Drawing.Size(106, 15);
             this.lblWorkExperience.TabIndex = 19;
             this.lblWorkExperience.Text = "Work Experience:";
             // 
@@ -258,32 +258,41 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(690, 395);
+            this.btnSave.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(171, 395);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 32);
+            this.btnSave.Size = new System.Drawing.Size(120, 43);
             this.btnSave.TabIndex = 21;
             this.btnSave.Text = "Save Profile";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(550, 395);
+            this.btnClear.BackColor = System.Drawing.Color.Red;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(357, 395);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(120, 32);
+            this.btnClear.Size = new System.Drawing.Size(120, 43);
             this.btnClear.TabIndex = 22;
             this.btnClear.Text = "Clear Fields";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(410, 395);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(528, 395);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(120, 32);
+            this.btnBack.Size = new System.Drawing.Size(120, 43);
             this.btnBack.TabIndex = 23;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // ProfileForm

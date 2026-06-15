@@ -193,6 +193,9 @@
     <EmbeddedResource Include="Forms\Applicant\MyApplicationForm.resx">
       <DependentUpon>MyApplicationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Applicant\ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\HR\ApplicantReviewForm.resx">
       <DependentUpon>ApplicantReviewForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HR\InterviewScheduleForm.resx">
       <DependentUpon>InterviewScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HR\ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HR\ScreeningForm.resx">
       <DependentUpon>ScreeningForm.cs</DependentUpon>
