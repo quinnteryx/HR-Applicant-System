@@ -85,24 +85,24 @@
             // lblSelectedApplicant
             // 
             this.lblSelectedApplicant.AutoSize = true;
-            this.lblSelectedApplicant.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lblSelectedApplicant.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblSelectedApplicant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblSelectedApplicant.Location = new System.Drawing.Point(8, 23);
             this.lblSelectedApplicant.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelectedApplicant.Name = "lblSelectedApplicant";
-            this.lblSelectedApplicant.Size = new System.Drawing.Size(122, 25);
+            this.lblSelectedApplicant.Size = new System.Drawing.Size(95, 19);
             this.lblSelectedApplicant.TabIndex = 0;
             this.lblSelectedApplicant.Text = "Applicant: —";
             // 
             // lblSelectedJob
             // 
             this.lblSelectedJob.AutoSize = true;
-            this.lblSelectedJob.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblSelectedJob.Font = new System.Drawing.Font("Segoe UI", 7F);
             this.lblSelectedJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.lblSelectedJob.Location = new System.Drawing.Point(8, 65);
             this.lblSelectedJob.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelectedJob.Name = "lblSelectedJob";
-            this.lblSelectedJob.Size = new System.Drawing.Size(49, 17);
+            this.lblSelectedJob.Size = new System.Drawing.Size(36, 12);
             this.lblSelectedJob.TabIndex = 1;
             this.lblSelectedJob.Text = "Job: —";
             // 
